@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bgsketch"
+    tools:context="com.tuanbi97.opencvtest.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="140dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:onClick="clearCanvas"
+                android:src="@drawable/eraser" />
+            <com.tuanbi97.opencvtest.ImageListView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tmpslot"
+                android:layout_width="70dp"
+                android:layout_height="210dp" />
+        </LinearLayout>
+        <com.tuanbi97.opencvtest.SketchView
+            android:id="@+id/sketchview"
+            android:layout_width="360dp"
+            android:layout_height="360dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="140dp"
+            android:layout_height="match_parent">
+            <com.tuanbi97.opencvtest.CustomImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/im1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp"
+                android:onClick="imOnClick"/>
+            <com.tuanbi97.opencvtest.CustomImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/im2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="4dp"
+                android:onClick="imOnClick"/>
+            <com.tuanbi97.opencvtest.CustomImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/im3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:onClick="imOnClick"/>
+            <ImageButton
+                android:layout_marginTop="24dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/next"
+                android:onClick="NextStepClick"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
